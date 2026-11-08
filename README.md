@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Savor – Recipe Discovery Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+Savor is a responsive recipe discovery website built using React.
+ It provides users with an easy and enjoyable way to discover recipes, explore meals, search for food, and save their favorite recipes.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Browse different recipes.
+- Search and filter recipes.
+- View recipe information.
+- Add recipes to favorites.
+- Manage saved favorite recipes.
+- Responsive and user-friendly interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React.js** – Building the user interface.
+- **JavaScript (ES6+)** – Website functionality and interactivity.
+- **HTML5** – Website structure.
+- **CSS3** – Styling and responsive design.
+- **Git** – Version control.
+- **GitHub** – Source code hosting.
 
-### `npm test`
+## Installation and Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to run the project locally.
 
-### `npm run build`
+### 1. Clone the repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/batoulbaghdadi/Savor-Recipe-Discovery-Website.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Navigate to the project directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+cd Savor-Recipe-Discovery-Website
+```
 
-### `npm run eject`
+### 3. Install dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Run the development server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open the local URL displayed in your terminal to view the website.
 
-## Learn More
+*Note: If your project uses Vite instead of Create React App, use `npm run dev` instead of `npm start`.*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Home Page
+Savor Home Page
+(screenshots/Home.png)
+### Recipes Page
+Savor Recipes Page
+(screenshots/Recipe1.png) 
+(screenshots/Recipe2.png)
 
-### Code Splitting
+### Favorites Page
+Savor Favorites Page
+(screenshots/Favorites.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Login Page
+Savor Login Page
+(screenshots/login.png)
+### Signup Page
+Savor Signup Page
+(screenshots/Signup.png)
 
-### Analyzing the Bundle Size
+## Live Website
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Website URL: https://savor-roan.vercel.app/home
 
-### Making a Progressive Web App
+## GitHub Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+https://github.com/batoulbaghdadi/Savor-Recipe-Discovery-Website
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Batoul Baghdadi**
