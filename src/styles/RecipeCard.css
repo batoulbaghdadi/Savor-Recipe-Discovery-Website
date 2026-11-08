@@ -1,0 +1,162 @@
+/* RecipeCard.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grid Container */
+.recipe-details-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  width: 90%;
+  margin: 40px auto 80px auto;
+  padding: 0 10px;
+}
+
+/* Recipe Card Wrapper */
+.recipe-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #EAE5D9;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(44, 62, 45, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(44, 62, 45, 0.12);
+}
+
+/* Recipe Image */
+.recipe-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.recipe-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Card Content Area */
+.recipe-card-content {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-card h2 {
+  font-size: 1.4rem;
+  color: #2C3E2D;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+/* Recipe Metadata (Prep, Cook, Servings) */
+.recipe-card p {
+  font-size: 0.9rem;
+  color: #556B53;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.recipe-card .recipe-description {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-size: 0.92rem;
+  color: #666666;
+  line-height: 1.5;
+  display: -webkit-box;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* --- SIDE-BY-SIDE BUTTON CONTAINER --- */
+.recipe-card-actions {
+  display: flex;
+  gap: 10px; /* Space between the two buttons */
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Shared Button / Link Styling (Identical Size & Shape) */
+.recipe-card-btn {
+  background-color: #7FAF72;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1; /* Makes both buttons share the row equally */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-sizing: border-box;
+}
+
+.recipe-card-btn:hover {
+  background-color: #2C3E2D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Favorite Button Variant (Same exact shape/size, subtle outline style) */
+.favorite-action-btn {
+  background-color: transparent;
+  color: #556B53;
+  border: 1.5px solid #7FAF72;
+}
+
+.favorite-action-btn:hover {
+  background-color: #7FAF72;
+  color: #FFFFFF;
+  border-color: #7FAF72;
+}
+/* --- FAVORITE BUTTON STATES --- */
+
+/* Disabled state when a recipe is already in favorites */
+.favorite-action-btn:disabled {
+  background-color: #7FAF72; /* Filled sage green background to show it's saved */
+  color: #FFFFFF;
+  border-color: #7FAF72;
+  cursor: not-allowed;
+  opacity: 0.85;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Optional: Add a smooth transition when switching states */
+.favorite-action-btn {
+  transition: all 0.2s ease-in-out;
+}
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .recipe-details-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 20px auto 50px auto;
+  }
+
+  .recipe-card img {
+    height: 190px;
+  }
+}
