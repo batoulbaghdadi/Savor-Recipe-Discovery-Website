@@ -2,16 +2,16 @@
 
 ## Project Description
 
-Savor is a responsive recipe discovery website built using React.
- It provides users with an easy and enjoyable way to discover recipes, explore meals, search for food, and save their favorite recipes.
+Savor is a responsive recipe discovery website built using React. It provides users with an easy and enjoyable way to discover recipes, explore different meals, search for food, view detailed recipe information, and save their favorite recipes.
 
 ## Features
 
 - Browse different recipes.
 - Search and filter recipes.
-- View recipe information.
+- View detailed recipe information, including ingredients and preparation instructions.
 - Add recipes to favorites.
 - Manage saved favorite recipes.
+- Navigate between different website pages.
 - Responsive and user-friendly interface.
 
 ## Technologies Used
@@ -20,8 +20,10 @@ Savor is a responsive recipe discovery website built using React.
 - **JavaScript (ES6+)** – Website functionality and interactivity.
 - **HTML5** – Website structure.
 - **CSS3** – Styling and responsive design.
+- **React Router** – Navigation between website pages.
 - **Git** – Version control.
 - **GitHub** – Source code hosting.
+- **Vercel** – Website deployment and hosting.
 
 ## Installation and Setup
 
@@ -53,36 +55,47 @@ npm start
 
 Open the local URL displayed in your terminal to view the website.
 
-*Note: If your project uses Vite instead of Create React App, use `npm run dev` instead of `npm start`.*
+**Note:** If your project uses Vite instead of Create React App, use `npm run dev` instead of `npm start`.
 
 ## Screenshots
 
 ### Home Page
 Savor Home Page
-(screenshots/Home.png)
+
+![Home Page](screenshots/Home.png)
+
 ### Recipes Page
 Savor Recipes Page
-(screenshots/Recipe1.png) 
-(screenshots/Recipe2.png)
+
+![Recipes Page 1](screenshots/Recipe1.png)
+
+![Recipes Page 2](screenshots/Recipe2.png)
+
+### Recipe Details Page
+Detailed information about the selected recipe.
+
+![Recipe Details Page](screenshots/RecipeDisplay.png)
 
 ### Favorites Page
 Savor Favorites Page
-(screenshots/Favorites.png)
+
+![Favorites Page](screenshots/Favorites.png)
 
 ### Login Page
-Savor Login Page
-(screenshots/login.png)
+
+![Login Page](screenshots/login.png)
+
 ### Signup Page
-Savor Signup Page
-(screenshots/Signup.png)
+
+![Signup Page](screenshots/Signup.png)
 
 ## Live Website
 
-Website URL: https://savor-roan.vercel.app/home
+Website URL: (https://savor-lyart.vercel.app/)
 
 ## GitHub Repository
 
-https://github.com/batoulbaghdadi/Savor-Recipe-Discovery-Website
+[https://github.com/batoulbaghdadi/Savor-Recipe-Discovery-Website](https://github.com/batoulbaghdadi/Savor-Recipe-Discovery-Website)
 
 ## Author
 
