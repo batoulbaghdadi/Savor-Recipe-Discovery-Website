@@ -1,9 +1,10 @@
 import "../styles/RecipeCard.css";
 import { useContext ,useState} from "react";
 import { SharedBox } from "../App"; 
-
+import { Link } from "react-router-dom";
 function RecipeCard({ recipe,isFavorite }) {
-  const onAddFavorite = useContext(SharedBox);
+ const { handleAddFavorite, handleDisplayRecipe } = useContext(SharedBox);
+   
 const [isFav,setIsFav]=useState(isFavorite);
   return (
     <div className="recipe-card">
@@ -22,15 +23,20 @@ const [isFav,setIsFav]=useState(isFavorite);
         <p className="recipe-description"> {recipe.description} </p>
         
         <div className="recipe-card-actions">
-          <button className="recipe-card-btn">
-            View Recipe
-          </button>
+        <Link
+    to="/RecipeDisplay"
+    className="recipe-card-btn"
+    onClick={() => handleDisplayRecipe(recipe)}
+>
+    View Recipe
+</Link>
+         
          
         {!isFav && (
     <button
         className="recipe-card-btn favorite-action-btn"
         onClick={() => {
-            onAddFavorite(recipe);
+            handleAddFavorite(recipe);
             setIsFav(true);
         }}
     >

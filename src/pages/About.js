@@ -32,7 +32,7 @@ function About() {
 
   return (
     <div className="about-container">
-      {/* Hero Section */}
+    
       <section className="about-hero">
         <div className="about-hero-text">
           <span className="about-badge">Our Story</span>
@@ -46,7 +46,7 @@ function About() {
         </div>
       </section>
 
-      {/* Philosophy and Why Savor Cards */}
+      
       <section className="about-info-grid">
         <div className="info-card">
           <h2>Why SAVOR?</h2>
@@ -66,7 +66,7 @@ function About() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      
       <section className="contact-section">
         <div className="contact-card">
           <h2>Get in Touch</h2>
