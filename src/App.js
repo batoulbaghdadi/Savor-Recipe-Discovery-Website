@@ -1,38 +1,32 @@
-import React, { useEffect, useState, createContext } from 'react';
+
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 import About from './pages/About';
-import RecipeControl from './pages/RecipeControl'; 
+import RecipeControl from './pages/RecipeControl';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import './App.css';
 import RecipeDisplay from './pages/RecipeDisplay';
 
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
-export const SharedBox = createContext();
+import SharedBoxProvider from "./Context/SharedBox";
+
+import './App.css';
 
 function App() {
+
   useEffect(() => {
     document.title = "Savor";
   }, []);
 
-  // favorites state
-  const [favorites, setFavorites] = useState([]);
-const [display, setDisplay] = useState(null);
-  // Add a recipe to favorites
-  const handleAddFavorite = (recipe) => {
-    setFavorites([...favorites, recipe]);
-  };
-const handleDisplayRecipe = (recipe) => {
-    setDisplay(recipe);
-  };
   return (
-    <div className="App">
-     
-      <SharedBox.Provider value={{handleAddFavorite,handleDisplayRecipe}}>
+    <SharedBoxProvider>
+      <div className="App">
+
         <Router>
           <NavBar />
 
@@ -42,14 +36,10 @@ const handleDisplayRecipe = (recipe) => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
 
-            <Route
-              path="/Favorites"
-              element={<Favorites favorites={favorites} onAddFavorite={handleAddFavorite} />}
-            />
-            <Route
-              path="/RecipeDisplay"
-              element={<RecipeDisplay display={display}  />}
-            />
+            <Route path="/Favorites" element={<Favorites />} />
+
+            <Route path="/RecipeDisplay" element={<RecipeDisplay />} />
+
             <Route path="/recipes" element={<RecipeControl />} />
 
             <Route path="/about" element={<About />} />
@@ -57,8 +47,9 @@ const handleDisplayRecipe = (recipe) => {
 
           <Footer />
         </Router>
-      </SharedBox.Provider>
-    </div>
+
+      </div>
+    </SharedBoxProvider>
   );
 }
 

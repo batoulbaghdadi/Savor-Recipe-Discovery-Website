@@ -160,3 +160,15 @@
     height: 190px;
   }
 }
+/* Remove Favorite Button */
+.remove-favorite-btn {
+  background-color: #fff1ed;
+  color: #b85c48;
+  border: 1.5px solid #e8b6a9;
+}
+
+.remove-favorite-btn:hover {
+  background-color: #b85c48;
+  color: #FFFFFF;
+  border-color: #b85c48;
+}

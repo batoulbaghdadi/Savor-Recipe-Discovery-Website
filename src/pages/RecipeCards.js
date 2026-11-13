@@ -1,49 +1,67 @@
 import "../styles/RecipeCard.css";
-import { useContext ,useState} from "react";
-import { SharedBox } from "../App"; 
+import { useContext, useState } from "react";
+import  {SharedBox} from "../Context/SharedBox";
 import { Link } from "react-router-dom";
-function RecipeCard({ recipe,isFavorite }) {
- const { handleAddFavorite, handleDisplayRecipe } = useContext(SharedBox);
-   
-const [isFav,setIsFav]=useState(isFavorite);
+
+function RecipeCard({ recipe, isFavorite }) {
+
+  const { handleAddFavorite, handleDisplayRecipe ,handleRemoveFavorite} = useContext(SharedBox);
+
+  const [isFav, setIsFav] = useState(isFavorite);
+
   return (
     <div className="recipe-card">
       <img src={recipe.image} alt={recipe.name} />
+
       <div className="recipe-card-content">
         <h2>{recipe.name}</h2>
+
         <p>
           <strong>Prep:</strong> {recipe.prepTime} mins
         </p>
+
         <p>
           <strong>Cooking Time:</strong> {recipe.cookTime} mins
         </p>
+
         <p>
           <strong>Servings:</strong> {recipe.servings} persons
         </p>
-        <p className="recipe-description"> {recipe.description} </p>
-        
-        <div className="recipe-card-actions">
-        <Link
+
+        <p className="recipe-description">{recipe.description}</p>
+
+      <div className="recipe-card-actions">
+
+  <Link
     to="/RecipeDisplay"
     className="recipe-card-btn"
     onClick={() => handleDisplayRecipe(recipe)}
->
+  >
     View Recipe
-</Link>
-         
-         
-        {!isFav && (
+  </Link>
+
+  {!isFav ? (
     <button
-        className="recipe-card-btn favorite-action-btn"
-        onClick={() => {
-            handleAddFavorite(recipe);
-            setIsFav(true);
-        }}
+      className="recipe-card-btn favorite-action-btn"
+      onClick={() => {
+        handleAddFavorite(recipe);
+        setIsFav(true);
+      }}
     >
-        Favorite
+      Favorite
     </button>
-)}
-        </div>
+  ) : (
+    <button
+      className="recipe-card-btn remove-favorite-btn"
+      onClick={() =>{handleRemoveFavorite(recipe);
+        setIsFav(false);}}
+      
+    >
+      Remove from Favorites
+    </button>
+  )}
+
+</div>
       </div>
     </div>
   );

@@ -1,12 +1,21 @@
 
 import "../styles/RecipeDisplay.css";
-function RecipeDisplay({ display }) {
+import { useContext } from "react";
+import  {SharedBox} from "../Context/SharedBox";
+
+function RecipeDisplay() {
+
+  const { display } = useContext(SharedBox);
 
   const selectedRecipe = display;
-return (
+
+  if (!selectedRecipe) {
+    return <p>No recipe selected. Please select a recipe first.</p>;
+  }
+
+  return (
     <div className="recipe-display">
 
-     
       <div className="recipe-display-hero">
 
         <div className="recipe-display-info">
@@ -17,7 +26,6 @@ return (
           <h1>{selectedRecipe.name}</h1>
 
           <p>{selectedRecipe.description}</p>
-
         </div>
 
         <img
@@ -28,39 +36,35 @@ return (
 
       </div>
 
-     
       <div className="recipe-details">
 
         <div>
-            <span>Preparation Time:</span>
+          <span>Preparation Time:</span>
           <strong>{selectedRecipe.prepTime} min</strong>
-          
         </div>
 
         <div>
-            <span>Cooking Time:</span>
+          <span>Cooking Time:</span>
           <strong>{selectedRecipe.cookTime} min</strong>
-          
         </div>
 
-        <div><span>Total Time:</span>
+        <div>
+          <span>Total Time:</span>
           <strong>{selectedRecipe.totalTime} min</strong>
-          
         </div>
 
-        <div>  <span>Servings:</span>
+        <div>
+          <span>Servings:</span>
           <strong>{selectedRecipe.servings}</strong>
-        
         </div>
 
-        <div><span>Difficulty:</span>
+        <div>
+          <span>Difficulty:</span>
           <strong>{selectedRecipe.difficulty}</strong>
-          
         </div>
 
       </div>
 
-     
       <div className="recipe-display-content">
 
         <section className="ingredients-section">
